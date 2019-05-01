@@ -1,4 +1,6 @@
 class ShortenedUrlsController < ApplicationController
+  skip_before_action :verify_authenticity_token  
+
   def create
     result = UrlsRepository.create(params[:url])
     render json: result, status: :created
