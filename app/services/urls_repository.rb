@@ -23,6 +23,8 @@ class UrlsRepository
       model.clear
     end
 
+    private
+
     def model
       UrlsStorage.instance.urls
     end
