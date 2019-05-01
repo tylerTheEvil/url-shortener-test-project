@@ -1,5 +1,6 @@
 class ShortenedUrlsController < ApplicationController
   def create
-    head :created
+    result = UrlsRepository.create(params[:url])
+    render json: result, status: :created
   end
 end

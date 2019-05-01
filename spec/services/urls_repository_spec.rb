@@ -22,7 +22,7 @@ RSpec.describe UrlsRepository do
     end
 
     it 'creates new record and store previos' do
-      expect(subject).to eq(full_url)
+      UrlsRepository.create(url)
       url = Faker::Internet.url
       expect(subject).to eq(full_url)
       expect(UrlsRepository.all.count).to eq(2)

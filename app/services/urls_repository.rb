@@ -19,6 +19,10 @@ class UrlsRepository
       all.first
     end
 
+    def destroy_all
+      model.clear
+    end
+
     def model
       UrlsStorage.instance.urls
     end
