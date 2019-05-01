@@ -73,3 +73,7 @@ This `.bundle` file can be cloned using:
 ```
     curl localhost:3000/shortened_urls -XPOST -d 'url=www.farmdrop.com'
 ```
+ - Perform GET request to a previously returned short url
+```
+    curl localhost:3000/FLTh38 -XGET
+```
