@@ -63,3 +63,13 @@ And send us the resulting `yournamehere-url-shortener-test.bundle` file.
 This `.bundle` file can be cloned using:
 
     git bundle clone bundle-filename.bundle -b master directory-name
+
+## How to run
+
+ - Clone this repository, navigate to project directory and run `bundle install`.
+ - Run `rspec spec` to check tests.
+ - Start rails server with `rails server`.
+ - Use curl to perform POST request to endpoint `/shortened_urls` with parameter `url`
+```
+    curl localhost:3000/shortened_urls -XPOST -d 'url=www.farmdrop.com'
+```
